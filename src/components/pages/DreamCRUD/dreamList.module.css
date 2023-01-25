@@ -1,0 +1,9 @@
+.listContainer {
+  background-color: gainsboro;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  padding: 50px 0;
+  margin: auto;
+  justify-content: center;
+}

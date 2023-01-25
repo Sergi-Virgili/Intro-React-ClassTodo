@@ -1,0 +1,21 @@
+.navBar {
+  /* POSITION */
+  position: fixed;
+  top: 0;
+  width: 100%;
+
+  /* COLORS */
+  background-color: var(--color_navbar);
+  color: white;
+  height: 70px;
+
+  /* DISPAY */
+  display: flex;
+  align-items: center;
+
+  /* SHADOWS */
+  /* border-bottom: 3px red solid; */
+  box-shadow: -2px 5px 10px rgba(51, 51, 51, 0.832);
+  /* margin-bottom: 60px; */
+  box-sizing: border-box;
+}

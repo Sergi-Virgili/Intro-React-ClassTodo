@@ -1,0 +1,16 @@
+.heroContainer {
+  background-color: red;
+  height: 350px;
+  background-image: url("https://www.esa.int/var/esa/storage/images/enabling_support/space_transportation/19716729-20-eng-GB/Space_Transportation_pillars.jpg");
+  background-position: center;
+  background-size: cover;
+  margin-top: 69px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.heroTitle {
+  color: white;
+  font-size: 4.5rem;
+}
