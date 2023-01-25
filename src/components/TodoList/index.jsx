@@ -44,7 +44,7 @@ export const TodoList = () => {
         newItem={newItem}
         createItem={createItem}
         handlerChange={handlerChange}
-      ></TaskForm>
+      />
       <section className={styles.listContainer}>
         {data.map((item) => (
           <Task
@@ -52,7 +52,7 @@ export const TodoList = () => {
             deleteItem={deleteItem}
             item={item}
             updateTask={updateTask}
-          ></Task>
+          />
         ))}
       </section>
     </div>
