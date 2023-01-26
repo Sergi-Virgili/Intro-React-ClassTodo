@@ -7,6 +7,7 @@
   box-shadow: 0 5px 15px #3f3f3f34;
   grid-row: span 1;
   border: solid 1px rgba(217, 217, 217, 0.324);
+  padding: 20px;
 }
 
 h3 {

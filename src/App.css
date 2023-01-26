@@ -4,3 +4,18 @@
   min-height: 100vh;
   padding-bottom: 8rem;
 }
+
+.loading-icon {
+  color: teal;
+  font-size: 2rem;
+  animation: animate 4s infinite;
+}
+
+@keyframes animate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(1080deg);
+  }
+}
