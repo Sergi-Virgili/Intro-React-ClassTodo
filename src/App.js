@@ -9,7 +9,7 @@ import { TodoList } from "./components/TodoList";
 
 function App() {
   return (
-    <div className="">
+    <div className="app">
       <NavBar />
       {/* <Hero /> */}
       {/* <DreamCRUD /> */}
