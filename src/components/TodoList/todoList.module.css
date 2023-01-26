@@ -1,7 +1,10 @@
 .listContainer {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 20px;
+  display: grid;
+  /* grid-auto-rows: 20rem; */
+  grid-auto-rows: auto;
+  grid-template-columns: repeat(auto-fill, minmax(20rem, 1fr));
+  gap: 1rem;
+  padding: 20px;
   padding-top: 20px;
   padding-bottom: 40px;
 }
