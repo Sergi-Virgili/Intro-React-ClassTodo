@@ -40,7 +40,9 @@ export const Task = ({ item, deleteItem, updateTask }) => {
           <FiCheck onClick={() => handlerUpdateTask()} />
         </>
       )}
-      <div onClick={() => deleteItem(item.id)}> X </div>
+      <div className={styles.deleteButton} onClick={() => deleteItem(item.id)}>
+        X
+      </div>
     </article>
   );
 };

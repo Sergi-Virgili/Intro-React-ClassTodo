@@ -1,5 +1,5 @@
 .formContainer {
-  background-color: #323232;
+  background-color: var(--color_navbar);
   position: absolute;
   bottom: 0;
   width: 100%;
@@ -8,6 +8,8 @@
   justify-content: center;
   align-items: center;
   position: fixed;
+  box-shadow: var(--box_shadow_default);
+  z-index: 1;
 }
 
 button {

@@ -3,13 +3,26 @@
   /* width: 20rem; */
   height: 100px;
   /* margin: 0 auto; */
-  border-radius: 20px;
-  box-shadow: 0 5px 15px #3f3f3f34;
+  border-radius: 10px;
+  box-shadow: var(--box_shadow_default);
   grid-row: span 1;
-  border: solid 1px rgba(217, 217, 217, 0.324);
+  border: solid 1px rgba(196, 196, 196, 0.324);
   padding: 20px;
+  position: relative;
 }
 
 h3 {
   margin: 0;
+}
+
+.deleteButton {
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  width: 20px;
+  height: 20px;
+  padding: 15px;
+  text-align: center;
+  /* background-color: rgb(196, 196, 196); */
+  border-radius: 50%;
 }

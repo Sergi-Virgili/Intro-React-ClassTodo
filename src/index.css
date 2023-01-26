@@ -2,7 +2,8 @@
 :root {
   /* COLORS */
   --color_background: #dcdcdc;
-  --color_navbar: #333;
+  --color_navbar: #004c5c;
+  --box_shadow_default: 5px 5px 5px #8d8d8d35;
 }
 
 body {
