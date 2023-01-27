@@ -9,7 +9,7 @@
 .loading-icon {
   color: teal;
   font-size: 2rem;
-  animation: animate 4s infinite;
+  animation: animate 2s infinite;
 }
 
 @keyframes animate {
@@ -17,6 +17,6 @@
     transform: rotate(0deg);
   }
   100% {
-    transform: rotate(1080deg);
+    transform: rotate(720deg);
   }
 }

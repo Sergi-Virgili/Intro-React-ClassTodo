@@ -5,7 +5,7 @@ import { Task } from "../Task";
 import { TaskForm } from "../TaskForm";
 import styles from "./todoList.module.css";
 import taskServices from "../../apiServices/taskServices";
-import { ImSpinner } from "react-icons/im";
+import { FiCommand } from "react-icons/fi";
 
 export const TodoList = () => {
   const [data, setData] = useState([]);
@@ -56,7 +56,7 @@ export const TodoList = () => {
       />
       {isLoading && (
         <div style={{ textAlign: "center" }}>
-          <ImSpinner className="loading-icon" />
+          <FiCommand className="loading-icon" />
         </div>
       )}
       <section className={styles.listContainer}>
