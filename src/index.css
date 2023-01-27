@@ -3,7 +3,9 @@
   /* COLORS */
   --color_background: #dcdcdc;
   --color_navbar: #004c5c;
-  --box_shadow_default: 5px 5px 5px #8d8d8d35;
+  --box_shadow_default: 5px 5px 5px #8d8d8d14;
+
+  /* Media Queries Base : TODO */
 }
 
 body {

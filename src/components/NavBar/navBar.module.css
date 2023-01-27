@@ -20,4 +20,9 @@
   /* margin-bottom: 60px; */
   box-sizing: border-box;
   z-index: 1;
+
+  padding: 20px 3rem;
+  text-transform: uppercase;
+  font-weight: 900;
+  font-size: medium;
 }
