@@ -1,11 +1,12 @@
 import { v4 as uuid } from "uuid";
 
 import React, { useEffect, useState } from "react";
-import { Task } from "../Task";
+import Task from "../Task";
 import { TaskForm } from "../TaskForm";
 import styles from "./todoList.module.css";
 import taskServices from "../../apiServices/taskServices";
 import { FiCommand } from "react-icons/fi";
+import TaskModel from "../../models/Task";
 
 export const TodoList = () => {
   const [data, setData] = useState([]);
@@ -15,16 +16,20 @@ export const TodoList = () => {
   useEffect(() => {
     taskServices.getAllData().then((x) => {
       setData(x);
+      console.log(x);
       setIsLoading(false);
     });
   }, []);
 
+  useEffect(() => {
+    console.log("data modify");
+  }, [data]);
+
   const createItem = () => {
     if (!newItem) return;
-    const itemToAdd = {
-      id: uuid(),
+    const itemToAdd = new TaskModel({
       title: newItem,
-    };
+    });
 
     setData([itemToAdd, ...data]);
     setNewItem("");
@@ -40,6 +45,7 @@ export const TodoList = () => {
   };
 
   const updateTask = (taskToUpdate) => {
+    console.log(taskToUpdate);
     const updatedData = data.map((item) =>
       item.id != taskToUpdate.id ? item : taskToUpdate
     );

@@ -1,6 +1,6 @@
 export const dataBase = [
   {
-    id: "1",
+    //Data SIN UUID
     title: "ir de compras",
     isDone: false,
   },

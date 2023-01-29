@@ -3,14 +3,16 @@ import { useEffect } from "react";
 import { useState } from "react";
 import styles from "./task.module.css";
 import { FiCheck, FiX } from "react-icons/fi";
+import { PropTypes } from "prop-types";
+import TaskModel from "../../models/Task";
 
-export const Task = ({ item, deleteItem, updateTask }) => {
+const Task = ({ item, deleteItem, updateTask }) => {
   const [input, setInput] = useState(item);
   const [isEditMode, setIsEditMode] = useState(false);
   // useEffect(() => {},[])
 
   const handlerInput = (value) => {
-    setInput({ ...input, title: value });
+    setInput(new TaskModel({ ...input, title: value }));
   };
 
   const handlerUpdateTask = () => {
@@ -46,3 +48,9 @@ export const Task = ({ item, deleteItem, updateTask }) => {
     </article>
   );
 };
+
+Task.propTypes = {
+  item: PropTypes.instanceOf(TaskModel).isRequired,
+};
+
+export default Task;
