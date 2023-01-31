@@ -18,6 +18,7 @@ const dataBase = [
   { id: "4", title: "dream2", img: "fdef.jpg" },
   { id: "5", title: "dream1", img: "fdef.jpg" },
   { id: "6", title: "dream2", img: "fdef.jpg" },
+  { id: "7", title: "dream2", img: "fdef.jpg" },
 ];
 
 export const DreamCRUD = () => {

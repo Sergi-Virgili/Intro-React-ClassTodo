@@ -16,7 +16,6 @@ export const TodoList = () => {
   useEffect(() => {
     taskServices.getAllData().then((x) => {
       setData(x);
-      console.log(x);
       setIsLoading(false);
     });
   }, []);
