@@ -34,7 +34,8 @@ export const TodoList = () => {
     setNewItem("");
   };
 
-  const deleteItem = (id) => {
+  const deleteItem = async (id) => {
+    await taskServices.deleteById(id);
     const newState = data.filter((item) => item.id != id);
     setData(newState);
   };
@@ -53,7 +54,6 @@ export const TodoList = () => {
 
   return (
     <div className="">
-      <h1>TodoList</h1>
       <TaskForm
         newItem={newItem}
         createItem={createItem}

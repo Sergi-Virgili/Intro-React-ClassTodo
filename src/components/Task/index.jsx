@@ -5,6 +5,7 @@ import styles from "./task.module.css";
 import { FiCheck, FiX } from "react-icons/fi";
 import { PropTypes } from "prop-types";
 import TaskModel from "../../models/Task";
+import { Link } from "react-router-dom";
 
 const Task = ({ item, deleteItem, updateTask }) => {
   const [input, setInput] = useState(item);
@@ -42,6 +43,7 @@ const Task = ({ item, deleteItem, updateTask }) => {
           <FiCheck onClick={() => handlerUpdateTask()} />
         </>
       )}
+      <Link to={"/tasks/" + item.id}>ver</Link>
       <div className={styles.deleteButton} onClick={() => deleteItem(item.id)}>
         X
       </div>

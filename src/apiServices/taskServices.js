@@ -20,8 +20,19 @@ const taskServices = {
   // },
   async getAllData() {
     return await axios
-      .get(apiBase)
+      .get(apiBase + "/tasks")
       .then((res) => res.data.map((item) => new TaskModel({ ...item })));
+  },
+
+  async getById(id) {
+    return await axios.get(apiBase + `/tasks/${id}`).then((res) => res.data);
+  },
+
+  async deleteById(id) {
+    return await axios
+      .delete(apiBase + `/tasks/${id}`)
+      .then((res) => res.data)
+      .catch((err) => console.log(err));
   },
 };
 

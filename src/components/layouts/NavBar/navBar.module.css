@@ -12,6 +12,7 @@
   /* DISPAY */
   display: flex;
   align-items: center;
+  justify-content: space-between;
 
   /* SHADOWS */
   box-shadow: var(--box_shadow_default);
