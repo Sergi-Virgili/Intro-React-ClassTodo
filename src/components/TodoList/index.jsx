@@ -7,6 +7,7 @@ import styles from "./todoList.module.css";
 import taskServices from "../../apiServices/taskServices";
 import { FiCommand } from "react-icons/fi";
 import TaskModel from "../../models/Task";
+import Loader from "../atoms/Loader/Loader";
 
 export const TodoList = () => {
   const [data, setData] = useState([]);
@@ -59,11 +60,7 @@ export const TodoList = () => {
         createItem={createItem}
         handlerChange={handlerChange}
       />
-      {isLoading && (
-        <div style={{ textAlign: "center" }}>
-          <FiCommand className="loading-icon" />
-        </div>
-      )}
+      {isLoading && <Loader />}
       <section className={styles.listContainer}>
         {data.map((item) => (
           <Task
