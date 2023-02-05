@@ -1,15 +1,12 @@
-import { v4 as uuid } from "uuid";
-
 import React, { useEffect, useState } from "react";
 import Task from "../Task";
-import { TaskForm } from "../TaskForm";
+import TaskForm from "../TaskForm";
 import styles from "./todoList.module.css";
-import taskServices from "../../apiServices/taskServices";
-import { FiCommand } from "react-icons/fi";
-import TaskModel from "../../models/Task";
-import Loader from "../atoms/Loader/Loader";
+import taskServices from "../../../apiServices/taskServices";
+import TaskModel from "../../../models/Task";
+import Loader from "../../atoms/Loader/Loader";
 
-export const TodoList = () => {
+const TodoList = () => {
   const [data, setData] = useState([]);
   const [newItem, setNewItem] = useState("");
   const [isLoading, setIsLoading] = useState(true);
@@ -74,3 +71,4 @@ export const TodoList = () => {
     </div>
   );
 };
+export default TodoList;

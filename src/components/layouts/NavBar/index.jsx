@@ -10,6 +10,7 @@ export const NavBar = () => {
         <header>
           <Link to={"/"}>Home</Link>
           <Link to={"/about"}>About</Link>
+          <Link to={"/tasks/form"}>Create</Link>
         </header>
       </div>
     </div>

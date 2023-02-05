@@ -1,13 +1,11 @@
 import "./App.css";
-import { Hero } from "./components/layouts/Hero";
-import { TodoList } from "./components/TodoList";
 import { NavBar } from "./components/layouts/NavBar";
-import { DreamCRUD } from "./components/pages/DreamCRUD";
 import Home from "./pages/Home/Home";
 import About from "./pages/About/About";
-import { Link, Route, Routes } from "react-router-dom";
+import { Route, Routes } from "react-router-dom";
 import Page404 from "./pages/404/404";
 import TaskDetail from "./pages/TaskDetail/TaskDetail";
+import TaskFormPage from "./pages/TaskForm/TaskFormPage";
 
 function App() {
   return (
@@ -21,7 +19,7 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
         <Route path="/tasks/:id" element={<TaskDetail />} />
-        {/* <Route path="/tasks/create" element={<TaskFormPage />} /> */}
+        <Route path="/tasks/form" element={<TaskFormPage />} />
         <Route path="*" element={<Page404 />} />
       </Routes>
     </div>

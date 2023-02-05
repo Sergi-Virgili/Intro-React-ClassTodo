@@ -4,7 +4,7 @@ import { useState } from "react";
 import styles from "./task.module.css";
 import { FiCheck, FiX } from "react-icons/fi";
 import { PropTypes } from "prop-types";
-import TaskModel from "../../models/Task";
+import TaskModel from "../../../models/Task";
 import { Link } from "react-router-dom";
 
 const Task = ({ item, deleteItem, updateTask }) => {
