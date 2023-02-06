@@ -34,6 +34,12 @@ const taskServices = {
       .then((res) => res.data)
       .catch((err) => console.log(err));
   },
+  async create(data) {
+    return await axios
+      .post(apiBase + `/tasks`, data)
+      .then((res) => res.data)
+      .catch((err) => console.log(err));
+  },
 };
 
 export default taskServices;
