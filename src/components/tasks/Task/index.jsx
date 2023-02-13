@@ -47,6 +47,9 @@ const Task = ({ item, deleteItem, updateTask }) => {
       <div className={styles.deleteButton} onClick={() => deleteItem(item.id)}>
         X
       </div>
+      <div className={styles.imgContainer}>
+        <img src={item.img} alt={item.title} />
+      </div>
     </article>
   );
 };

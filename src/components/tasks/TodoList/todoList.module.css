@@ -10,3 +10,20 @@
   max-width: 1250px;
   margin: auto;
 }
+
+.toast {
+  width: 100px;
+  padding: 1rem;
+  background-color: red;
+  border-radius: 0.5rem;
+  opacity: 100;
+  transition: all 2s;
+}
+
+.hide {
+  width: 100px;
+  padding: 1rem;
+  background-color: red;
+  opacity: 0;
+  transition: all 2s;
+}

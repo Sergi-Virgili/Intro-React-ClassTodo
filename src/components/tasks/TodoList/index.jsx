@@ -10,6 +10,7 @@ const TodoList = () => {
   const [data, setData] = useState([]);
   const [newItem, setNewItem] = useState("");
   const [isLoading, setIsLoading] = useState(true);
+  const [toast, setToast] = useState("");
 
   useEffect(() => {
     taskServices.getAllData().then((x) => {
@@ -36,6 +37,10 @@ const TodoList = () => {
     await taskServices.deleteById(id);
     const newState = data.filter((item) => item.id != id);
     setData(newState);
+    setToast("deleted");
+    setTimeout(() => {
+      setToast("");
+    }, 2000);
   };
 
   const handlerChange = (value) => {
@@ -52,11 +57,11 @@ const TodoList = () => {
 
   return (
     <div className="">
-      <TaskForm
+      {/* <TaskForm
         newItem={newItem}
         createItem={createItem}
         handlerChange={handlerChange}
-      />
+      /> */}
       {isLoading && <Loader />}
       <section className={styles.listContainer}>
         {data.map((item) => (
@@ -68,6 +73,10 @@ const TodoList = () => {
           />
         ))}
       </section>
+
+      <div className={toast ? `${styles.toast}` : `${styles.hide}`}>
+        {toast}
+      </div>
     </div>
   );
 };

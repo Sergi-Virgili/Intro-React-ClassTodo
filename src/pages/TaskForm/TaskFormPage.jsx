@@ -15,8 +15,8 @@ function TaskFormPage() {
     const name = e.target.name;
     const value = e.target.value;
     console.log(name);
-    const temp = (newTask[name] = value);
-    setNewTask({ ...newTask, temp });
+    newTask[name] = value;
+    setNewTask({ ...newTask });
   };
 
   const handleSubmit = async (e) => {
